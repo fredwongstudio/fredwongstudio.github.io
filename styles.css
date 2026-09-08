@@ -739,3 +739,19 @@ footer .text-link {
 .tool-links a:hover,.tool-links a:focus-visible {
   color:var(--orange)
 }
+
+/* The exploration card uses the existing palette and editorial treatment. */
+.spatial-art svg {
+  position:absolute;
+  width:80%;
+  height:70%;
+  top:8%;
+  left:10%
+}
+#visualisation-explorations .project-heading {
+  display:block
+}
+#visualisation-explorations .project-heading>span {
+  display:block;
+  margin-top:8px
+}
