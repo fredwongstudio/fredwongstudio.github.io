@@ -702,3 +702,40 @@ footer .text-link {
 .project {
   min-width: 0;
 }
+
+/* Whole-card project links retain the existing artwork hover treatment. */
+.project {
+  position:relative
+}
+.project-link::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:3;
+  cursor:pointer
+}
+.project-link:focus-visible {
+  outline:none
+}
+.project-link:focus-visible::after {
+  outline:2px solid var(--orange);
+  outline-offset:7px
+}
+.tool-links {
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0 20px;
+  padding:0;
+  margin:13px 0 0;
+  font-size:12px
+}
+.tool-links a {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  min-height:44px
+}
+.tool-links a:hover,.tool-links a:focus-visible {
+  color:var(--orange)
+}
