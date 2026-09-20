@@ -350,15 +350,7 @@ footer { font-size:10px; color:var(--muted); line-height:1.5; padding-block:8px;
   line-height:1.4;
 }
 
-/* Quiet positioning beneath the wordmark; red remains punctuation-only. */
 .site-header { flex-direction:column; align-items:flex-start; gap:4px; }
-.studio-positioning {
-  margin:0;
-  font-size:12px;
-  line-height:1.4;
-  font-style:italic;
-  color:var(--muted);
-}
 
 /* Subtle contact legibility adjustment. */
 .contact-link small { font-size:12px; }
