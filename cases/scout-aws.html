@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>SCOUT AWS — Case — Fred Wong Innovation Studio</title>
+  <meta name="description" content="An experimental AWS-focused evolution of the SCOUT agentic commerce prototype.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html#top" aria-label="Fred Wong Innovation Studio home">FRED WONG <span class="orange" style="display:inline">/</span> INNOVATION STUDIO</a>
+  </header>
+  <main id="main" class="case">
+    <article class="case-wrap">
+      <a class="back-link" href="../index.html#experiments">← Body of Work</a>
+      <div class="art case-art scout-art" aria-hidden="true"><svg viewBox="0 0 600 350"><g fill="none" stroke="currentColor" opacity=".24"><ellipse cx="300" cy="180" rx="235" ry="120"/><ellipse cx="300" cy="180" rx="165" ry="120"/><path d="M65 180h470M93 120h414"/></g><path d="M112 252 Q252 236 300 180 Q348 124 480 108" fill="none" stroke="#eafc84" stroke-width="2" stroke-dasharray="5 7"/><circle cx="112" cy="252" r="6" fill="#eafc84"/><path d="m482 107-27-3 12 11 1 17z" fill="#eafc84"/><rect x="266" y="150" width="68" height="60" rx="10" fill="none" stroke="#eafc84" stroke-width="1.5" opacity=".8"/><path d="M284 180h32" stroke="#eafc84" stroke-width="1.5" opacity=".8"/></svg></div>
+      <h1>SCOUT AWS</h1>
+      <p class="case-tag">Agentic commerce, re-architected on AWS</p>
+      <!-- Sources: SCOUT-AWS README (github.com/fredwongstudio/SCOUT-AWS) — sections intro, "Current architecture", "Current V0 state", "Run locally"; commit log ("SCOUT AWS V0 - pre-AWS baseline", "SCOUT AWS V0.1 - distinguish AWS fork", "Clean SCOUT AWS prototype structure", Sep 2026). -->
+      <section>
+        <h2>What it is</h2>
+        <p>An experimental, AWS-focused evolution of the original SCOUT agentic commerce prototype. Its purpose is to explore how SCOUT’s agentic travel experience can be architected using AWS infrastructure while retaining the freedom to experiment with different AI models and providers.</p>
+      </section>
+      <section>
+        <h2>Approach</h2>
+        <!-- Sources: SCOUT-AWS README "Current V0 state" and "Current architecture"; commit log. -->
+        <p>The README sets the discipline: the current V0 state preserves the inherited SCOUT application behaviour before AWS infrastructure is introduced — the baseline is committed and labelled (V0 pre-AWS, then V0.1 to distinguish the fork) so the evolution can be measured against the original.</p>
+        <p>The structure separates the customer-facing application (<code>app/</code>) from backend orchestration (<code>server/</code>), with supporting utilities in <code>scripts/</code>. Payment and booking execution remain simulated — this is a prototype, not a production booking system.</p>
+      </section>
+      <section>
+        <h2>Tech</h2>
+        <!-- Sources: SCOUT-AWS README "Run locally". -->
+        <ul>
+          <li>Frontend (Vite) and backend run as separate processes; the dev server proxies <code>/api</code> to the backend on port 3000</li>
+          <li>Local configuration via <code>.env</code> (kept out of the repository)</li>
+        </ul>
+      </section>
+      <p class="case-links"><a href="https://scout-aws.vercel.app/">Live prototype <span aria-hidden="true">↗</span></a><a href="https://github.com/fredwongstudio/SCOUT-AWS">Repository <span aria-hidden="true">↗</span></a></p>
+    </article>
+  </main>
+  <footer class="wrap">© 2026 Fred Wong Innovation Studio</footer>
+</body>
+</html>

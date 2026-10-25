@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>ID Copilot — Case — Fred Wong Innovation Studio</title>
+  <meta name="description" content="An AI interior design copilot exploring agentic AI, LLM workflows, space planning and quotation automation.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html#top" aria-label="Fred Wong Innovation Studio home">FRED WONG <span class="orange" style="display:inline">/</span> INNOVATION STUDIO</a>
+  </header>
+  <main id="main" class="case">
+    <article class="case-wrap">
+      <a class="back-link" href="../index.html#experiments">← Body of Work</a>
+      <div class="art case-art design-art" aria-hidden="true"><div class="design-composition"><div class="plan"><span></span></div><div class="swatch"></div><div class="arch"></div><div class="material"></div></div></div>
+      <h1>ID COPILOT</h1>
+      <p class="case-tag">AI interior design workflow prototype</p>
+      <!-- Sources: repo description "AI Interior Design Copilot — exploring agentic AI, LLM workflows, space planning and quotation automation" (github.com/fredwongstudio/ID-Copilot); ID-Copilot live page (fredwongstudio.github.io/ID-Copilot) hero copy and wireframe note; commit log ("Switch to Anthropic API for floor plan analysis", "Fix Floor Plan Agent CORS and AI connection", Vercel configuration commits, Aug 2026); home-page card context by Fred Wong Studio. -->
+      <section>
+        <h2>What it is</h2>
+        <p>An exploration of how AI could reduce the administrative work surrounding interior design while preserving the part designers actually value: designing. ID Copilot covers agentic AI, LLM workflows, space planning and quotation automation.</p>
+      </section>
+      <section>
+        <h2>The problem</h2>
+        <p>Interior design carries a long tail of administration around the creative work — briefs, floor-plan analysis, measurements, quotations. I wanted to see how far an AI copilot could take that surrounding work, screen by screen.</p>
+      </section>
+      <section>
+        <h2>Approach</h2>
+        <!-- Sources: ID-Copilot live page copy ("Tell us about your home, your lifestyle and your design preferences. IDCopilot turns your ideas into a personalised interior design concept." + wireframe note "this screen creates the user_id that every later screen's data attaches to"); commit log. -->
+        <p>The prototype is built as a wireframed flow: the opening screen captures the home, lifestyle and design preferences, and creates the identity that every later screen’s data attaches to. Ideas become a personalised design concept through LLM workflows — including floor-plan analysis, which I moved onto the Anthropic API during development while debugging the agent’s connection through to a deployed backend on Vercel.</p>
+      </section>
+      <section>
+        <h2>Tech</h2>
+        <ul>
+          <li>Static front-end prototype with per-screen wireframe notes marking how data attaches across the flow</li>
+          <li>LLM workflows behind a deployed API (Vercel), floor-plan analysis via the Anthropic API</li>
+        </ul>
+      </section>
+      <p class="case-links"><a href="https://fredwongstudio.com/ID-Copilot/">Live prototype <span aria-hidden="true">↗</span></a><a href="https://github.com/fredwongstudio/ID-Copilot">Repository <span aria-hidden="true">↗</span></a></p>
+    </article>
+  </main>
+  <footer class="wrap">© 2026 Fred Wong Innovation Studio</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>Family Calendar — Case — Fred Wong Innovation Studio</title>
+  <meta name="description" content="A personal family calendar application for organising shared family schedules — one self-contained web app, no accounts, no server.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html#top" aria-label="Fred Wong Innovation Studio home">FRED WONG <span class="orange" style="display:inline">/</span> INNOVATION STUDIO</a>
+  </header>
+  <main id="main" class="case">
+    <article class="case-wrap">
+      <a class="back-link" href="../index.html#experiments">← Body of Work</a>
+      <div class="art case-art cal-art" aria-hidden="true"><svg viewBox="0 0 600 350"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect x="150" y="62" width="300" height="228" rx="14"/><path d="M150 110h300M250 110v180M350 110v180M150 170h300M150 230h300"/></g><rect x="256" y="116" width="88" height="48" rx="8" fill="#d34a29" opacity=".85"/><path d="M196 44v30M404 44v30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div>
+      <h1>FAMILY CALENDAR</h1>
+      <p class="case-tag">A shared family schedule, kept simple</p>
+      <!-- Sources: repo description "Personal family calendar application for organizing and managing shared family schedules" (github.com/fredwongstudio/familycalendar); commit log ("Responsive UI update", "Add mobile row view", "Fix mobile time picker", "Add All Day option to time selection", "Lighten school holiday tint further", "Fix grid column drift caused by long event text", Aug 2026); repository contents (single index.html; localStorage used for persistence). -->
+      <section>
+        <h2>What it is</h2>
+        <p>A personal family calendar application for organising and managing shared family schedules. Not a product — a tool for my own household, built the way I want it to work.</p>
+      </section>
+      <section>
+        <h2>The problem</h2>
+        <p>A shared family schedule has simple, stubborn requirements: it has to work on a phone held in one hand, mark school holidays, allow all-day entries, and stay readable when an event description is long. The repository’s iteration history shows exactly where the difficulty was — mobile row views, mobile time pickers, school-holiday shading, and grid columns drifting under long event text.</p>
+      </section>
+      <section>
+        <h2>Approach</h2>
+        <!-- Sources: commit log (above) — each listed iteration is grounded in a commit message; repository contents. -->
+        <p>One self-contained page, refined through many small passes: a responsive calendar grid that reflows into a row-based view on mobile, all-day entries in the time picker, school-holiday shading on the calendar, and layout fixes as real use exposed them — long event text drifting the grid columns, mobile pickers, type sizes.</p>
+      </section>
+      <section>
+        <h2>Tech</h2>
+        <ul>
+          <li>A single HTML/CSS/JS file — no dependencies, no account, no server</li>
+          <li>Entries persist in browser <code>localStorage</code></li>
+        </ul>
+      </section>
+      <p class="case-links"><a href="https://fredwongstudio.com/familycalendar/">Live app <span aria-hidden="true">↗</span></a><a href="https://github.com/fredwongstudio/familycalendar">Repository <span aria-hidden="true">↗</span></a></p>
+    </article>
+  </main>
+  <footer class="wrap">© 2026 Fred Wong Innovation Studio</footer>
+</body>
+</html>

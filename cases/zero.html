@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>ZERO — Case — Fred Wong Innovation Studio</title>
+  <meta name="description" content="Dial 0. Just ask. A working AI hotel operator prototype: guests press 0 and speak naturally to an AI operator.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html#top" aria-label="Fred Wong Innovation Studio home">FRED WONG <span class="orange" style="display:inline">/</span> INNOVATION STUDIO</a>
+  </header>
+  <main id="main" class="case">
+    <article class="case-wrap">
+      <a class="back-link" href="../index.html#experiments">← Body of Work</a>
+      <div class="art case-art scout-art" style="background:#343945;color:#e0ded6" aria-hidden="true"><svg viewBox="0 0 600 350"><g fill="none" stroke="currentColor" opacity=".22"><circle cx="300" cy="165" r="120"/><circle cx="300" cy="165" r="82"/><circle cx="300" cy="165" r="44"/></g><path d="M135 165h42l18-40 28 80 30-112 36 144 31-98 28 62 24-36h83" fill="none" stroke="#e9b899" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h1>ZERO</h1>
+      <p class="case-tag">AI hotel operator prototype — dial 0, just ask</p>
+      <!-- Sources: zero README (github.com/fredwongstudio/zero) — sections intro, "Voice and data flow", "State", "Verification"; repo homepage https://zero-iota-six.vercel.app. -->
+      <section>
+        <h2>What it is</h2>
+        <p>A working AI hotel operator prototype that lets hotel guests press 0 and speak naturally to an AI operator — an exploration of what guest service could become when an AI can understand, respond and coordinate service requests.</p>
+      </section>
+      <section>
+        <h2>The problem</h2>
+        <p>Pressing 0 for the operator is the oldest interface in hotels. ZERO asks what happens when that call is answered by an AI operator that can hold a natural conversation, clarify details like quantities, and act on them.</p>
+      </section>
+      <section>
+        <h2>Approach</h2>
+        <!-- Sources: zero README, "Exact ElevenLabs agent setup" (client tool createServiceRequest with room/requestType/item/quantity/department; expects_response), "Voice and data flow" (token route, validation, simulated created result), state paragraph. -->
+        <p>The guest presses 0; ElevenLabs owns the live call audio over WebRTC, with a short-lived conversation token obtained server-side so credentials never reach the browser. The agent is given one client tool, <code>createServiceRequest</code>, with a strict parameter contract (room, request type, item, quantity, department); the app validates every parameter, returns a simulated <em>created</em> result, and shows a post-call summary.</p>
+        <p>I kept the prototype deliberately honest about what it is: payment and dispatch are simulated, state lives only in memory for the duration of one call, and there is no database, login or real housekeeping integration. Without configured credentials the interface says so clearly rather than pretending the call worked.</p>
+      </section>
+      <section>
+        <h2>Tech &amp; verification</h2>
+        <!-- Sources: zero README, "Run locally" (stack), "Verification" (unit + browser suites, five widths), "Manual live acceptance checks — still required". -->
+        <ul>
+          <li>Next.js / React / TypeScript / Tailwind; ElevenLabs conversational agent with a client-tool contract</li>
+          <li>Unit checks (validated requests, rejected invalid quantities, conservative Wi-Fi resolution, mocked token route) and a browser suite across 375–1440px covering keyboard activation, touch targets, mute, error states and microphone denial</li>
+          <li>Live acceptance with a real configured agent remains open — the README lists the checks still required</li>
+        </ul>
+      </section>
+      <p class="case-links"><a href="https://zero-iota-six.vercel.app/">Live prototype <span aria-hidden="true">↗</span></a><a href="https://github.com/fredwongstudio/zero">Repository <span aria-hidden="true">↗</span></a></p>
+    </article>
+  </main>
+  <footer class="wrap">© 2026 Fred Wong Innovation Studio</footer>
+</body>
+</html>

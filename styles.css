@@ -422,3 +422,46 @@ body>footer { flex-shrink:0; padding-bottom:24px; }
   .hero-bottom p { font-size:clamp(20px,1.46vw,22px); }
   .hero h1 { margin-bottom:6px; }
 }
+
+/* New gallery artworks (MYOS, Family Calendar) — same palette and stroke language as the existing cards. */
+.os-art {
+  background:#253e36;
+  color:#e2e9cb
+}
+.os-art svg {
+  position:absolute;
+  width:100%;
+  height:90%;
+  left:0;
+  top:0
+}
+.cal-art {
+  background:#e6dfd4;
+  color:#554e44
+}
+.cal-art svg {
+  position:absolute;
+  width:70%;
+  height:88%;
+  left:15%;
+  top:6%
+}
+
+/* Case-study pages: same tokens and header as the home page, single reading column. */
+.case-wrap { width:min(760px,90%); margin-inline:auto; }
+.back-link { display:inline-flex; align-items:center; min-height:44px; font-size:12px; }
+.back-link:hover { color:var(--orange); }
+.case-art { aspect-ratio:2.4; }
+@media(min-width:1101px) {
+  .case .art { aspect-ratio:auto; height:clamp(180px,32svh,260px); }
+}
+.case h1 { margin-bottom:8px; }
+.case-tag { margin:0 0 4px; font-size:13px; color:var(--muted); }
+.case-links { display:flex; flex-wrap:wrap; gap:8px 24px; margin-top:14px; font-size:13px; }
+.case-links a { display:inline-flex; align-items:center; min-height:44px; }
+.case-links a:hover { color:var(--orange); }
+.case section h2 { font-size:11px; font-weight:400; text-transform:uppercase; letter-spacing:1.3px; color:var(--muted); margin:34px 0 8px; }
+.case p { font-size:15px; line-height:1.7; margin:0 0 12px; }
+.case ul { margin:0; padding-left:20px; }
+.case li { font-size:14px; line-height:1.7; margin-bottom:6px; }
+.case blockquote { margin:16px 0; padding-left:18px; border-left:2px solid var(--orange); font-size:15px; line-height:1.6; color:var(--muted); }

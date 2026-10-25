@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>SCOUT — Case — Fred Wong Innovation Studio</title>
+  <meta name="description" content="An agentic commerce flight booking prototype: what flight discovery and booking could become when the interface is a conversation.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html#top" aria-label="Fred Wong Innovation Studio home">FRED WONG <span class="orange" style="display:inline">/</span> INNOVATION STUDIO</a>
+  </header>
+  <main id="main" class="case">
+    <article class="case-wrap">
+      <a class="back-link" href="../index.html#experiments">← Body of Work</a>
+      <div class="art case-art scout-art" aria-hidden="true"><svg viewBox="0 0 600 350"><g fill="none" stroke="currentColor" opacity=".24"><ellipse cx="300" cy="180" rx="235" ry="120"/><ellipse cx="300" cy="180" rx="165" ry="120"/><ellipse cx="300" cy="180" rx="70" ry="120"/><path d="M65 180h470M93 120h414M93 240h414"/></g><path d="M125 224 Q280 20 474 129" fill="none" stroke="#eafc84" stroke-width="2" stroke-dasharray="5 7"/><circle cx="125" cy="224" r="6" fill="#eafc84"/><path d="m476 128-27-3 12 11 1 17z" fill="#eafc84"/></svg></div>
+      <h1>SCOUT</h1>
+      <p class="case-tag">Agentic commerce flight booking prototype</p>
+      <!-- Sources: repo description "Agentic Commerce Flight Booking Prototype" (github.com/fredwongstudio/scout); the home-page card context written by Fred Wong Studio; scout README ("SCOUT React UI Foundation"); commit log (destination background loop, hero positioning, chatbox opacity tuning, 2026-09). -->
+      <section>
+        <h2>What it is</h2>
+        <p>An exploration of what flight discovery and booking could become when the interface is a conversation and AI agents can increasingly act on our behalf.</p>
+      </section>
+      <section>
+        <h2>The problem</h2>
+        <p>Flight search today is form-first: filters, grids and comparison tables. SCOUT asks what the experience looks like when discovery is conversational instead — and how to evolve the interface without breaking the working prototype underneath it.</p>
+      </section>
+      <section>
+        <h2>Approach</h2>
+        <!-- Sources: scout README sections "Why this architecture", "Run", "Current treatment", "Important"; commit log. -->
+        <p>I kept the existing backend (<code>server/atlas.js</code>) untouched and built a parallel React/Vite UI layer alongside it, so the working prototype stayed the source of truth while I validated the new architecture safely.</p>
+        <p>The UI is built on unstyled primitives — Thread, Composer and Message — so SCOUT keeps its own visual treatment while the library handles chat state, scrolling, keyboard behaviour and cancellation. The current treatment is "Expandable Glass": the first message expands the chat panel and lifts the hero copy. Most of the recent iteration has been visual — a seamless destination background loop, hero positioning, and many small passes on chatbox opacity.</p>
+      </section>
+      <section>
+        <h2>Tech</h2>
+        <ul>
+          <li>Node backend (<code>server/atlas.js</code>) kept as the working prototype’s source of truth</li>
+          <li>React + Vite UI layer on <code>@assistant-ui/react</code> 0.15.15, with the Vite dev proxy forwarding <code>/api</code> to the backend on port 3000</li>
+        </ul>
+      </section>
+      <p class="case-links"><a href="https://fredwongstudio.com/scout/">Live prototype <span aria-hidden="true">↗</span></a><a href="https://github.com/fredwongstudio/scout">Repository <span aria-hidden="true">↗</span></a></p>
+    </article>
+  </main>
+  <footer class="wrap">© 2026 Fred Wong Innovation Studio</footer>
+</body>
+</html>

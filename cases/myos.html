@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <title>MYOS — Case — Fred Wong Innovation Studio</title>
+  <meta name="description" content="MYOS — My Operating System: a personal innovation OS for capturing ideas by voice and reviewing a personal timeline.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../index.html#top" aria-label="Fred Wong Innovation Studio home">FRED WONG <span class="orange" style="display:inline">/</span> INNOVATION STUDIO</a>
+  </header>
+  <main id="main" class="case">
+    <article class="case-wrap">
+      <a class="back-link" href="../index.html#experiments">← Body of Work</a>
+      <div class="art case-art os-art" aria-hidden="true"><svg viewBox="0 0 600 350"><g fill="none" stroke="currentColor" opacity=".3"><path d="M170 68v224M170 112h210M170 180h260M170 248h160"/></g><g fill="currentColor" opacity=".45"><circle cx="170" cy="112" r="6"/><circle cx="170" cy="180" r="6"/><circle cx="170" cy="248" r="6"/></g><path d="M236 62q14-26 28 0t28 0 28 0" fill="none" stroke="#eafc84" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+      <h1>MYOS</h1>
+      <p class="case-tag">MYOS — My Operating System: a personal innovation OS</p>
+      <!-- Sources: repo description "personal-innovation-os" (github.com/fredwongstudio/myos); app title "MYOS - My Operating System" (index.html <title>); commit log ("Initial MYOS v0.1 prototype", "Add local storage persistence", "MYOS protected baseline - capture storage search", "Add browser voice capture", "Add timeline entry filters", Aug 2026); repository contents (two single-file HTML apps). -->
+      <section>
+        <h2>What it is</h2>
+        <p>My own personal innovation OS — a small web app for capturing ideas and reviewing them later. If the studio’s public work is about other people’s problems, MYOS is the tooling for my own stream of them.</p>
+      </section>
+      <section>
+        <h2>The problem</h2>
+        <p>Idea capture usually dies between the moment of thought and the moment of review. I wanted one place that takes an idea as fast as I can say it, and lets me find it again later.</p>
+      </section>
+      <section>
+        <h2>Approach</h2>
+        <!-- Sources: commit log (voice capture, timeline entry filters, local storage persistence); repository contents (single-file HTML app; localStorage used for persistence). -->
+        <p>Three moves, each built in a single pass: capture entries by browser voice capture, keep everything in browser storage (no account, no server), and review them as a personal timeline with filters over the entries.</p>
+      </section>
+      <section>
+        <h2>Tech</h2>
+        <ul>
+          <li>A self-contained HTML/CSS/JS application — two single-file versions, no dependencies and no back end</li>
+          <li>Browser voice capture for entry; <code>localStorage</code> for persistence</li>
+        </ul>
+      </section>
+      <p class="case-links"><a href="https://fredwongstudio.com/myos/">Live app <span aria-hidden="true">↗</span></a><a href="https://github.com/fredwongstudio/myos">Repository <span aria-hidden="true">↗</span></a></p>
+    </article>
+  </main>
+  <footer class="wrap">© 2026 Fred Wong Innovation Studio</footer>
+</body>
+</html>

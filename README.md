@@ -20,9 +20,12 @@ Deployment has not been performed. A custom domain is optional and would need se
 
 ## Editing
 
-- `index.html`: copy, section structure, experiment cards and email link.
+- `index.html`: copy, section structure, project cards and email link.
+- `cases/*.html`: one static case-study page per project card (content derived from each project repository; sources cited in HTML comments).
 - `styles.css`: responsive layout, typography, abstract artwork and reduced-motion handling.
+- `scripts/linkcheck.mjs`: G1 gate — every external href must return 200 (`node scripts/linkcheck.mjs`).
+- `scripts/htmlcheck.py`: unclosed-tag smoke check over all HTML files (`python scripts/htmlcheck.py`).
 - `favicon.svg`: studio icon.
 - `.nojekyll`: serves the site as plain static files.
 
-Experiment artwork is conceptual, not a product screenshot. Cards are semantic articles with stable IDs; when real case studies exist, add links to their headings. No placeholder case-study links or invented outcomes are included.
+Experiment artwork is conceptual, not a product screenshot. Cards are semantic articles with stable IDs, and each card heading links to its case study. No placeholder case-study links or invented outcomes are included.
